@@ -2,12 +2,12 @@
 .portfolio_container {
   width: 100vw;
   height: 100vh;
-  // background-color: beige;
+  background-color: #36454f;
   display: flex;
   flex-direction: row;
   position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
 
   //Child1
   .sideNav {
@@ -15,34 +15,32 @@
     flex: 0.05;
     width: 100%;
     height: 100%;
+    z-index: 800;
 
     @media screen and (max-width: 900px) {
-      flex: 0.10;
+      flex: 0.1;
       height: 30%;
       width: 100%;
     }
   }
-
-  //Child2
+  //Child2:
   .content {
-   background: linear-gradient(180deg,#045480 , #045683);
     flex: 0.95;
     width: 100%;
     height: 100%;
-    padding: 2rem;
+    padding: 3rem 0px;
 
-    @media screen and (max-width: 900px) {
-      flex: 0.90;
+@media screen and (max-width: 900px) {
+      flex: 0.7;
       height: 70%;
       width: 100%;
-
     }
 
-    @media screen and (max-width:600px){
+@media screen and (max-width: 600px) {
       flex: 0.81;
       width: 100%;
       height: 70%;
-      background: linear-gradient(180deg,#79c9f5 , #6771ff);
+      background-color: #36454f;
       transition: flex 0.3s linear;
     }
   }
@@ -50,21 +48,14 @@
   @media screen and (max-width: 900px) {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 2rem;
   }
-};
-
-@media screen and (max-width:600px){
-  #ContentExpand{
-    flex: 0.90;
-    width: 100%;
-    height: 70%;
-    transition: flex 0.3s linear;
-  }
-  #ContentShrink{
-    flex: 0.81;
-    width: 100%;
-    height: 70%;
-    transition: flex 0.3s linear;
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
   }
 }
+
