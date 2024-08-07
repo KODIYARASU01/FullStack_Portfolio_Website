@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import "./SideNav.scss";
 import Logo from "../../assets/Logo.png";
-const SideNav = ({ShowToggleMenu, setShowToggleMenu}) => {
-
+import { context } from "../../App";
+const SideNav = () => {
+  let {ShowToggleMenu,setShowToggleMenu}=useContext(context);
   return (
     // parent `Column1
     <div className="sidenav_container">
@@ -45,6 +46,8 @@ const SideNav = ({ShowToggleMenu, setShowToggleMenu}) => {
           <i className="bx bxl-gmail"></i>
         </div>
       </div>
+
+
       {/* MenuIcon show enter in 600px*/}
       <div className="menu_icons">
         <div
@@ -63,3 +66,5 @@ const SideNav = ({ShowToggleMenu, setShowToggleMenu}) => {
 };
 
 export default SideNav;
+
+
